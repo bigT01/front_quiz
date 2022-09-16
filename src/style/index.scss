@@ -15,6 +15,15 @@ h3{
   font-size: 32px;
 }
 
+h2{
+  font-size: 40px;
+}
+
+button{
+  font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
+}
+
 .content_wrapper{
   width: 100vw;
   height: 100vh;
@@ -32,6 +41,59 @@ h3{
         font-size: 32px;
       }
     }
+    .role_content{
+      background-color: $modal-background;
+      width: 50vw;
+      padding: 24px 35px;
+      height: 25vw;
+      animation: aniAppend 0.5s linear forwards;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 30px;
+      .role_header{
+      }
+      .role_body{
+        display: flex;
+        width: 100%;
+        margin: 0 auto ;
+        justify-content: space-between;
+
+        .role{
+          border: 1px solid $total-black;
+          background-color: $modal-background;
+          padding: 10px 25px;
+          border-radius: 10px;
+          font-size: 32px;
+          cursor: pointer;
+          color: $total-black;
+          &:hover{
+            animation: aniRoleBtn 0.2s linear forwards;
+          }
+          &.active{
+            background-color: #7F7CAF;
+            border: 1px solid #7F7CAF;
+            color: $total-white;
+          }
+        }
+      }
+      .role_footer{
+        .confirm{
+          padding: 10px 20px;
+          border-radius: 10px;
+          border: 1px solid #8997A4;
+          background-color: #8997A4;
+          color: $modal-background;
+          font-size: 18px;
+          cursor: not-allowed;
+          opacity: .5;
+          &.active{
+            animation: aniRoleConfirm 0.2s linear forwards;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -46,3 +108,39 @@ h3{
     opacity: 0;
   }
 }
+
+@keyframes aniAppend {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes aniRoleBtn {
+  0%{
+    background-color: $modal-background;
+    border: 1px solid $total-black;
+    color: $total-black;
+  }
+  100%{
+    background-color: #7F7CAF;
+    border: 1px solid #7F7CAF;
+    color: $total-white;
+  }
+}
+
+@keyframes aniRoleConfirm {
+  0%{
+    border: 1px solid #8997A4;
+    background-color: #8997A4;
+    opacity: .5;
+  }
+  100%{
+    border: 1px solid #1DBA69;
+    background-color: #1DBA69;
+    opacity: 1;
+  }
+}
+

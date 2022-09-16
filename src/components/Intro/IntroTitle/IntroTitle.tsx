@@ -16,6 +16,7 @@ const IntroTitle: React.FC<Props> = ({setIsEnd}) => {
 
         setTimeout(() => {
             introTitle.style.display = 'none'
+            setIsEnd(true)
         }, 7000)
     }, [])
     return(

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Helmet } from 'react-helmet';
-import Typed from 'react-typed';
-import IntroTitle from "./components/IntroTitle/IntroTitle";
+import IntroTitle from "./components/Intro/IntroTitle/IntroTitle";
+import Role from "./components/Intro/Role/Role";
 
 function App() {
     const [isEnd, setIsEnd] = useState<boolean>(false)
@@ -15,8 +15,8 @@ function App() {
                   rel="stylesheet" />
         </Helmet>
         <div className="presentation_content">
-            <IntroTitle setIsEnd={setIsEnd}/>
-
+            {!isEnd && < IntroTitle setIsEnd={setIsEnd}/>}
+            {isEnd && <Role />}
         </div>
     </div>
   );
