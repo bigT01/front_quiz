@@ -1,3 +1,24 @@
+.participant_page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.participant_page .participant_content {
+  background-color: #EEEEFF;
+  width: 100%;
+  max-width: 60vw;
+  padding: 24px 35px;
+  max-height: 70vh;
+  height: 100%;
+  animation: aniAppend 0.5s linear forwards;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 30px;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -14,7 +35,7 @@ h3 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 48px;
 }
 
 button {
@@ -89,6 +110,9 @@ button {
   animation: aniRoleConfirm 0.2s linear forwards;
   cursor: pointer;
 }
+.content_wrapper .presentation_content .role_content.disActive {
+  animation: aniDisAppend 1s linear forwards;
+}
 
 @keyframes aniIntro {
   0% {
@@ -107,6 +131,14 @@ button {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes aniDisAppend {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes aniRoleBtn {
