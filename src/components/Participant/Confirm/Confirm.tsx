@@ -1,11 +1,18 @@
 import s from './confirm.module.css'
 import React, {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const Confirm = () => {
     const [name, setName] = useState<string>('')
+    const navigate:any = useNavigate()
 
     const next = () => {
+        const pageId:any = document.getElementById('participant')
+        pageId.classList.add('disActive')
 
+        setTimeout(() => {
+            navigate('/participant/quiz')
+        }, 1200)
     }
 
     function getCookie(cname:string) {

@@ -7,7 +7,7 @@ const Participant = () => {
     const [isConfirm, setIsConfirm] = useState<boolean>(false)
 
     return(
-        <div className={'participant_page'}>
+        <div className={'participant_page'} id={'participant'}>
             <div className="participant_content">
                 <div className="content_header">
                     <h2>Participant</h2>

@@ -18,6 +18,9 @@
   gap: 30px;
   border-radius: 30px;
 }
+.participant_page.disActive {
+  animation: aniDisAppend 1s linear forwards;
+}
 
 body {
   padding: 0;
