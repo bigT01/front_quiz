@@ -1,5 +1,6 @@
 import Login from "../../components/Participant/Login/Login";
 import {useState} from "react";
+import Confirm from "../../components/Participant/Confirm/Confirm";
 
 const Participant = () => {
     const [isLogin, setIsLogin] = useState<boolean>(false)
@@ -13,7 +14,7 @@ const Participant = () => {
                 </div>
                 <div className="content_body">
                     {!isLogin && <Login setIsLogin={setIsLogin}/>}
-                    {}
+                    {isLogin && !isConfirm && <Confirm />}
                 </div>
             </div>
         </div>
