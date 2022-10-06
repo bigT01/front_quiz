@@ -1,0 +1,54 @@
+.quiz_page{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .quiz_content{
+    background-color: $modal-background;
+    width: 100%;
+    max-width: 60vw;
+    padding: 24px 35px;
+    max-height: 70vh;
+    height: 100%;
+    animation: aniAppend 0.5s linear forwards;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 30px;
+    .tab_wrapper{
+      width: 100%;
+      height: 40px;
+      background-color: $total-white;
+      box-shadow: 0px 17px 40px 0px #0000001A;
+      border-radius: 10px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      margin-bottom: 15px;
+      .tab_btn{
+        border: none;
+        background-color: inherit;
+        padding: 0;
+        &.first{
+          border-radius: 10px 0 0 10px;
+        }
+        &.last{
+          border-radius: 0 10px 10px 0;
+        }
+      }
+    }
+    .quiz-information{
+      .title{
+        h4{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+
+  &.disActive{
+    animation: aniDisAppend 1s linear forwards;
+  }
+}
