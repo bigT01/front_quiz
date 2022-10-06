@@ -4,7 +4,7 @@ const QuizPage = () => {
     return(
         <div className={'quiz_page'}>
             <div className="quiz_content">
-                <div className="tab_wrapper">
+                <div className="tab_wrapper"> dknnk
                     <button className="tab_btn first">1</button>
                     <button className="tab_btn">2</button>
                     <button className="tab_btn">3</button>
