@@ -36,6 +36,11 @@
         &.last{
           border-radius: 0 10px 10px 0;
         }
+        &.active{
+          background-color: $color-green;
+          color: $total-white;
+
+        }
       }
     }
     .quiz-information{

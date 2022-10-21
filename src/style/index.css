@@ -64,6 +64,10 @@
 .quiz_page .quiz_content .tab_wrapper .tab_btn.last {
   border-radius: 0 10px 10px 0;
 }
+.quiz_page .quiz_content .tab_wrapper .tab_btn.active {
+  background-color: #1DBA69;
+  color: #FFFFFF;
+}
 .quiz_page .quiz_content .quiz-information .title h4 {
   font-size: 24px;
 }
